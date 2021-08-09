@@ -102,6 +102,6 @@ async def play(_, message: Message):
         photo=thumb_name,
         reply_markup=keyboard,
         caption="**🎵 Song:** {}\n**🕒 Duration:** {} min\n**👤 Added By:** {}\n\n**▶️ Now Playing at `{}`...**".format(
-        title, duration, message.from_user.mention(), chat_id
+        title, duration, message.from_user.mention(), message.chat.title
         ), )
         return await lel.delete()
